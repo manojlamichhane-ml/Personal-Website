@@ -13,8 +13,8 @@ export default function Hero({ profile }) {
         <h1 className="bio-greeting">{profile.bioGreeting}</h1>
         <p className="bio">{profile.bio}</p>
         <div className="hero-ctas">
-          <a className="btn btn-primary" href="#research">
-            Explore research ↗
+          <a className="btn btn-primary" href="#publications">
+            Explore publications ↗
           </a>
           <a className="btn btn-outline" href={cvHref}>
             Download CV ↗

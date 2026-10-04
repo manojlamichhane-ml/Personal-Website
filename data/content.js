@@ -1,6 +1,6 @@
 // ---------------------------------------------------------------------------
-// Fields marked [FILL IN] are placeholders — replace with your real info.
-// Everything else here is drawn from your revised resume + Google Scholar list.
+// This is your full, current site content. Replace the entire contents of
+// data/content.js with this file.
 // ---------------------------------------------------------------------------
 
 export const profile = {
@@ -83,35 +83,126 @@ export const experience = [
 
 export const skills = [
   {
-    category: "Water Resources & Hydraulic Modeling",
+    category: "Water Resources — Hydraulics & Hydrology Modeling",
     items: [
-      "Dam breach & flood inundation analysis",
-      "FLO-2D",
-      "RiverFlow2D",
-      "FLOW-3D",
-      "HEC-RAS",
-      "HEC-HMS",
-      "SWAT / SWAT+",
-      "QGIS",
-      "ArcGIS Pro",
-      "ArcGIS Online",
-      "Google Earth Engine",
-      "ENVI",
-      "Pix4D",
+      {
+        name: "HEC-RAS (1D & 2D)",
+        icon: "hec-ras.png",
+        story:
+          "My very first hydraulic model, and still the one everything else gets measured against. I've run 1D HEC-RAS on more than 50 bridge scour analyses, and used both 1D and 2D for flood inundation mapping and dam breach studies.",
+      },
+      {
+        name: "HEC-HMS",
+        icon: "hec-hms.png",
+        story:
+          "My first hydrologic model — the one that turns rainfall into runoff. I use it to derive return-period floods that feed straight into the hydraulic models downstream.",
+      },
+      {
+        name: "FLO-2D",
+        icon: "flo-2d.png",
+        story:
+          "The model waiting for me on day one at my first U.S. consulting job. I've used it for tailings dam breach analysis — both the breach itself and routing the flood wave downstream.",
+      },
+      {
+        name: "RiverFlow2D",
+        icon: "riverflow-2d.png",
+        story:
+          "My favorite 2D hydraulics engine, hands down — the sheer number of controls it gives you is addictive once you learn where they live. I use it for dam breach analysis.",
+      },
+      {
+        name: "FLOW-3D",
+        icon: "flow-3d.png",
+        story:
+          "The most powerful software in my toolkit. When a dam breach or bridge scour problem needs full 3D resolution, this is what I open.",
+      },
+      {
+        name: "HY-8",
+        icon: "hy-8.png",
+        story: "The quiet workhorse for culvert analysis — sizing crossings and checking flow capacity.",
+      },
+      {
+        name: "SWAT / SWAT+",
+        icon: "swat.png",
+        story:
+          "A long-running relationship — I've used these models for years for rainfall-runoff, sediment, and nutrient modeling across entire watersheds.",
+      },
+      {
+        name: "ArcGIS",
+        icon: "arcgis.png",
+        story:
+          "My go-to for a long time — one of the most capable toolsets for data prep and visualization. For the heavy lifting, I write code inside it to automate the repetitive parts.",
+      },
+      {
+        name: "QGIS",
+        icon: "qgis.png",
+        story:
+          "I didn't fall for it right away. But once I started building real workflows in it, I became a convert — open source, capable, and I use it constantly for visualization, data prep, and scripting automation into hydraulic and hydrologic models.",
+      },
+      {
+        name: "Civil 3D",
+        icon: "civil-3d.png",
+        story:
+          "Where raw survey points become usable terrain — I've used it to turn field data into terrain surfaces, river alignments, and cross-sections that feed straight into HEC-RAS models.",
+      },
     ],
   },
   {
-    category: "Data Science & Machine Learning",
+    category: "Machine Learning & Data Science",
     items: [
-      "Python (NumPy, Pandas, Scikit-learn, TensorFlow, Keras)",
-      "R",
-      "MATLAB",
-      "FORTRAN",
-      "Random Forest / SVM / XGBoost / ANN / LSTM",
-      "HPC (Linux clusters, SLURM)",
-      "MLOps (reproducible pipelines, automated batch training)",
-      "Power BI",
-      "Excel (VBA)",
+      {
+        name: "Machine Learning",
+        icon: "machine-learning.png",
+        story:
+          "The thread running through my whole PhD — from predicting soil moisture to explaining why wheat yields vary field to field, I build models that turn satellite and climate data into answers.",
+      },
+      {
+        name: "MLOps",
+        icon: "mlops.png",
+        story:
+          "Models are only useful if they keep working after the first run. I build reproducible, end-to-end pipelines — automated batch training and inference on HPC clusters — so research models hold up outside a notebook.",
+      },
+      {
+        name: "HPC",
+        icon: "hpc.png",
+        story:
+          "Big remote sensing datasets don't move fast on a laptop. I run parallel jobs on Linux clusters via SLURM to process climate, terrain, and satellite data at a scale a single machine can't touch.",
+      },
+      {
+        name: "Python",
+        icon: "python.png",
+        story:
+          "My daily language — NumPy and Pandas for wrangling data, Scikit-learn, TensorFlow, and Keras for the modeling, Matplotlib for making sense of it visually.",
+      },
+      {
+        name: "Google Earth Engine",
+        icon: "google-earth-engine.png",
+        story:
+          "My platform of choice for planet-scale remote sensing — pulling, filtering, and processing satellite imagery at a scale that would be unworkable on a local machine.",
+      },
+      {
+        name: "Java (GEE)",
+        icon: "java.png",
+        story:
+          "Not my primary language, but the one I reach for inside Google Earth Engine's code editor when building large-scale remote sensing pipelines.",
+      },
+      {
+        name: "R",
+        icon: "r.png",
+        story:
+          "My statistics language — Mann-Kendall and Pettitt trend tests, OLS calibration, the kind of rigorous stats work journal reviewers expect done properly.",
+      },
+      {
+        name: "MATLAB",
+        icon: "matlab.png",
+        story:
+          "Where a lot of my earlier numerical modeling work lived — matrix-heavy calculations and custom analysis scripts from before Python became my default.",
+      },
+      {
+        name: "FORTRAN",
+        icon: "fortran.png",
+        story:
+          "An unusual one for a water resources engineer to know, but it comes up more than you'd think in legacy hydrologic and climate modeling code — I can read it, write it, and keep it running.",
+      },
     ],
   },
 ];
