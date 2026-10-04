@@ -711,3 +711,99 @@ footer.site-footer {
     gap: 0.25rem;
   }
 }
+/* ===========================================================
+   SKILLS GRID — paste this ENTIRE block at the very end of
+   app/globals.css. This replaces any earlier partial skills
+   CSS you may have added — if you already pasted something
+   with "skill-tile" or "skill-grid" in it, delete that old
+   block first so there's no duplicate/conflicting CSS.
+   =========================================================== */
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.skill-tile {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border: 1px solid var(--color-line);
+  border-radius: 10px;
+  background: var(--color-bg-raised);
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.skill-tile:hover,
+.skill-tile.is-active,
+.skill-tile:focus-visible {
+  border-color: var(--color-accent);
+  outline: none;
+}
+
+.skill-tile-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1rem;
+  text-align: center;
+  transition: opacity 0.2s ease;
+}
+
+.skill-tile-front {
+  opacity: 1;
+}
+
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.skill-tile-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-ink);
+  line-height: 1.25;
+}
+
+.skill-tile-name-only {
+  font-size: 1.05rem;
+}
+
+.skill-tile-back {
+  opacity: 0;
+  background: var(--color-bg);
+}
+
+.skill-tile-back p {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  line-height: 1.5;
+  color: var(--color-ink-soft);
+}
+
+.skill-tile:hover .skill-tile-front,
+.skill-tile.is-active .skill-tile-front {
+  opacity: 0;
+}
+
+.skill-tile:hover .skill-tile-back,
+.skill-tile.is-active .skill-tile-back {
+  opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .skill-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+

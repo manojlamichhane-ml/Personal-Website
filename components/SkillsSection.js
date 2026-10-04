@@ -5,6 +5,8 @@ import { withBasePath } from "@/lib/paths";
 
 function SkillTile({ item }) {
   const [active, setActive] = useState(false);
+  const [imageFailed, setImageFailed] = useState(false);
+  const showIcon = Boolean(item.icon) && !imageFailed;
 
   function toggle() {
     setActive((v) => !v);
@@ -30,15 +32,20 @@ function SkillTile({ item }) {
       aria-label={`${item.name}: ${item.story}`}
     >
       <div className="skill-tile-face skill-tile-front">
-        {item.icon && (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={withBasePath(`/skills/${item.icon}`)}
-            alt=""
-            className="skill-icon"
-          />
+        {showIcon ? (
+          <>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={withBasePath(`/skills/${item.icon}`)}
+              alt=""
+              className="skill-icon"
+              onError={() => setImageFailed(true)}
+            />
+            <span className="skill-tile-name">{item.name}</span>
+          </>
+        ) : (
+          <span className="skill-tile-name skill-tile-name-only">{item.name}</span>
         )}
-        <span className="skill-tile-name">{item.name}</span>
       </div>
       <div className="skill-tile-face skill-tile-back">
         <p>{item.story}</p>
