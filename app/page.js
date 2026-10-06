@@ -1,7 +1,7 @@
 import { TopBar, MetaStrip } from "@/components/Nav";
 import Hero from "@/components/Hero";
-import CVSection from "@/components/CVSection";
 import SkillsSection from "@/components/SkillsSection";
+import CVSection from "@/components/CVSection";
 import PublicationsSection from "@/components/PublicationsSection";
 import AwardsSection from "@/components/AwardsSection";
 import ContactSection from "@/components/ContactSection";
@@ -27,8 +27,8 @@ export default function Home() {
       <div className="layout">
         <main>
           <Hero profile={profile} />
-          <CVSection education={education} experience={experience} />
           <SkillsSection skills={skills} />
+          <CVSection education={education} experience={experience} />
           <PublicationsSection
             publications={publications}
             publicationsNote={publicationsNote}

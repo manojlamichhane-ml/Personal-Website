@@ -712,17 +712,40 @@ footer.site-footer {
   }
 }
 /* ===========================================================
-   SKILLS GRID — paste this ENTIRE block at the very end of
-   app/globals.css. This replaces any earlier partial skills
-   CSS you may have added — if you already pasted something
-   with "skill-tile" or "skill-grid" in it, delete that old
-   block first so there's no duplicate/conflicting CSS.
+   SKILLS SECTION — FINAL VERSION
+   Before pasting this in: search globals.css for "skill" and
+   delete every rule you find from earlier attempts (skill-grid,
+   skill-tile, skill-tile-face, skill-icon, skill-tile-name,
+   skill-tile-back, etc). Then paste this whole block at the end.
    =========================================================== */
+
+/* Headline — handwritten accent font, used only here */
+.skills-headline {
+  font-family: var(--font-caveat), cursive;
+  font-weight: 700;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  color: var(--color-ink);
+  text-shadow: 0 0 24px rgba(47, 224, 195, 0.35);
+  margin-bottom: 1.75rem;
+}
+
+/* Let the Skills section use the full layout width instead of the
+   narrow reading column other sections use, so more tiles fit per row */
+.section.skills-wide {
+  max-width: 100%;
+}
+
+.skills-subheading {
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: 0.04em;
+}
 
 .skill-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 1rem;
+  align-items: start;
 }
 
 .skill-tile {
@@ -732,32 +755,27 @@ footer.site-footer {
   border-radius: 10px;
   background: var(--color-bg-raised);
   cursor: pointer;
-  overflow: hidden;
+  padding: 1rem;
   transition: border-color 0.2s ease;
 }
 
 .skill-tile:hover,
 .skill-tile.is-active,
 .skill-tile:focus-visible {
+  aspect-ratio: auto;
+  min-height: 200px;
   border-color: var(--color-accent);
   outline: none;
 }
 
-.skill-tile-face {
-  position: absolute;
-  inset: 0;
+.skill-tile-front {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  padding: 1rem;
   text-align: center;
-  transition: opacity 0.2s ease;
-}
-
-.skill-tile-front {
-  opacity: 1;
 }
 
 .skill-icon {
@@ -779,26 +797,30 @@ footer.site-footer {
 }
 
 .skill-tile-back {
-  opacity: 0;
-  background: var(--color-bg);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0.25rem;
 }
 
 .skill-tile-back p {
   margin: 0;
   font-family: var(--font-mono);
   font-size: 0.76rem;
-  line-height: 1.5;
+  line-height: 1.55;
   color: var(--color-ink-soft);
+  text-align: center;
 }
 
 .skill-tile:hover .skill-tile-front,
 .skill-tile.is-active .skill-tile-front {
-  opacity: 0;
+  display: none;
 }
 
 .skill-tile:hover .skill-tile-back,
 .skill-tile.is-active .skill-tile-back {
-  opacity: 1;
+  display: flex;
 }
 
 @media (max-width: 480px) {
@@ -806,4 +828,3 @@ footer.site-footer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-

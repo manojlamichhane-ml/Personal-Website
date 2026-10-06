@@ -31,7 +31,7 @@ function SkillTile({ item }) {
       aria-pressed={active}
       aria-label={`${item.name}: ${item.story}`}
     >
-      <div className="skill-tile-face skill-tile-front">
+      <div className="skill-tile-front">
         {showIcon ? (
           <>
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -47,7 +47,7 @@ function SkillTile({ item }) {
           <span className="skill-tile-name skill-tile-name-only">{item.name}</span>
         )}
       </div>
-      <div className="skill-tile-face skill-tile-back">
+      <div className="skill-tile-back">
         <p>{item.story}</p>
       </div>
     </div>
@@ -56,12 +56,11 @@ function SkillTile({ item }) {
 
 export default function SkillsSection({ skills }) {
   return (
-    <section className="section" id="skills">
-      <h2>Skills</h2>
-      <p className="lede">Hover (or tap) a tile to see how I actually use it.</p>
+    <section className="section skills-wide" id="skills">
+      <h2 className="skills-headline">Behold, My Skills!</h2>
       {skills.map((group) => (
         <div key={group.category} style={{ marginBottom: "2.5rem" }}>
-          <p className="subheading">{group.category.toUpperCase()}</p>
+          <p className="subheading skills-subheading">{group.category.toUpperCase()}</p>
           <div className="skill-grid">
             {group.items.map((item) => (
               <SkillTile key={item.name} item={item} />

@@ -1,4 +1,4 @@
-import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
+import { Space_Grotesk, Inter, JetBrains_Mono, Caveat } from "next/font/google";
 import "./globals.css";
 import { profile } from "@/data/content";
 
@@ -20,6 +20,12 @@ const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
 });
 
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: "--font-caveat",
+});
+
 export const metadata = {
   title: `${profile.name} — ${profile.title}`,
   description: profile.bio,
@@ -29,7 +35,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${inter.variable} ${jetBrainsMono.variable}`}
+      className={`${spaceGrotesk.variable} ${inter.variable} ${jetBrainsMono.variable} ${caveat.variable}`}
     >
       <body>{children}</body>
     </html>
