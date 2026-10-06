@@ -88,7 +88,8 @@ export default function ChatWidget({ profile }) {
         onClick={() => setOpen((v) => !v)}
         aria-label={open ? "Close chat" : "Open chat"}
       >
-        {open ? "✕" : "💬"}
+        <span className="chat-fab-icon">{open ? "✕" : "💬"}</span>
+        {!open && <span className="chat-fab-label">Chat</span>}
       </button>
 
       {open && (

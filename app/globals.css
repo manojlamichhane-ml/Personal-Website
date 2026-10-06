@@ -529,16 +529,32 @@ footer.site-footer {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 999px;
   border: none;
   background: var(--color-accent);
   color: var(--color-bg);
-  font-size: 1.4rem;
   cursor: pointer;
   box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.5);
   z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0 1.1rem;
+}
+
+.chat-fab-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.chat-fab-label {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .chat-panel {
