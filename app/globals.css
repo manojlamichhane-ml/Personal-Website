@@ -417,7 +417,7 @@ button:focus-visible {
 }
 
 .row-list > * {
-  padding: 1.1rem 0 1.1rem 1.1rem;
+  padding: 0.8rem 0 0.8rem 1.1rem;
   border-left: 2px solid var(--color-line);
   border-bottom: 1px solid var(--color-line);
 }
@@ -742,7 +742,7 @@ footer.site-footer {
 
 .skill-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
   gap: 1rem;
   align-items: start;
 }
@@ -754,7 +754,7 @@ footer.site-footer {
   border-radius: 10px;
   background: var(--color-bg-raised);
   cursor: pointer;
-  padding: 1rem;
+  padding: 0.75rem;
   transition: border-color 0.2s ease;
 }
 
@@ -778,8 +778,8 @@ footer.site-footer {
 }
 
 .skill-icon {
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
 }
 
@@ -827,6 +827,7 @@ footer.site-footer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 /* ===========================================================
    CONTACT FORM
    =========================================================== */
