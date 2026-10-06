@@ -3,10 +3,11 @@ import ChatNavLink from "./ChatNavLink";
 
 const links = [
   { href: "#about", label: "ABOUT" },
-  { href: "#cv", label: "CV" },
   { href: "#skills", label: "SKILLS" },
+  { href: "#timeline", label: "TIMELINE" },
   { href: "#publications", label: "PUBLICATIONS" },
   { href: "#awards", label: "AWARDS" },
+  { href: "#contact", label: "CONTACT" },
 ];
 
 export function TopBar({ profile }) {

@@ -8,15 +8,11 @@ import ContactSection from "@/components/ContactSection";
 import ChatWidget from "@/components/ChatWidget";
 import {
   profile,
-  education,
   experience,
   skills,
   publications,
   publicationsNote,
   awards,
-  certificates,
-  service,
-  memberships,
 } from "@/data/content";
 
 export default function Home() {
@@ -28,18 +24,13 @@ export default function Home() {
         <main>
           <Hero profile={profile} />
           <SkillsSection skills={skills} />
-          <CVSection education={education} experience={experience} />
+          <CVSection experience={experience} />
           <PublicationsSection
             publications={publications}
             publicationsNote={publicationsNote}
             profile={profile}
           />
-          <AwardsSection
-            awards={awards}
-            certificates={certificates}
-            service={service}
-            memberships={memberships}
-          />
+          <AwardsSection awards={awards} />
           <ContactSection profile={profile} />
         </main>
       </div>
