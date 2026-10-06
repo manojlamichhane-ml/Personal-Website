@@ -146,7 +146,8 @@ button:focus-visible {
   color: var(--color-bg);
 }
 
-/* Theme toggle — a pastel gradient slider pill, click to switch light/dark */
+/* Accent color picker — a gradient slider bar, click or drag to pick
+   your accent color anywhere along it */
 .theme-toggle {
   position: relative;
   width: 56px;
@@ -165,25 +166,18 @@ button:focus-visible {
   );
   cursor: pointer;
   flex-shrink: 0;
+  touch-action: none;
+  user-select: none;
 }
 
 .theme-toggle .knob {
   position: absolute;
   top: 3px;
-  left: 5px;
-  display: block;
   width: 6px;
   height: 20px;
   border-radius: 3px;
-  background: #d9601f;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
-  transform: translateX(0);
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-
-:root[data-theme="light"] .theme-toggle .knob {
-  background: #6a4bb0;
-  transform: translateX(38px);
+  background: #ffffff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35);
 }
 
 /* Meta strip under top bar */
