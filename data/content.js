@@ -192,12 +192,6 @@ export const skills = [
           "My statistics language — Mann-Kendall and Pettitt trend tests, OLS calibration, the kind of rigorous stats work journal reviewers expect done properly.",
       },
       {
-        name: "MATLAB",
-        icon: "matlab.png",
-        story:
-          "Where a lot of my earlier numerical modeling work lived — matrix-heavy calculations and custom analysis scripts from before Python became my default.",
-      },
-      {
         name: "FORTRAN",
         icon: "fortran.png",
         story:
