@@ -8,7 +8,7 @@ export default function ContactSection({ profile }) {
     <section className="section contact-section" id="contact">
       <h2>Contact</h2>
       <p className="lede">
-        Based in {profile.location}. Open to collaboration, consulting, and
+        Open to collaboration, consulting, and
         research inquiries.
       </p>
       <p style={{ marginBottom: "2rem" }}>

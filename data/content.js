@@ -13,7 +13,7 @@ export const profile = {
   bioGreeting: "Hi, I'm Manoj!",
   bio:
     "I'm a Water Resources Engineer working at the intersection of machine learning, climate modeling, and remote sensing. I spent my PhD years applying machine learning and advanced remote sensing to understand and address complex water resources challenges. I'm especially interested in building and deploying ML models and developing scalable workflows through MLOps.",
-  email: "Manoj.Lamichhane@jacks.sdstate.edu",
+  email: "drlamichhane.manoj@gmail.com",
   phone: "(607) 663-0567",
   scholarUrl: "https://scholar.google.com/citations?user=1a5hblcAAAAJ&hl=en",
   linkedinUrl: "https://www.linkedin.com/in/manoj-lamichhane-ph-d-58455028b",
