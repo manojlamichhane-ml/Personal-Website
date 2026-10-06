@@ -35,13 +35,7 @@ export const education = [
     institution: "Tribhuvan University, Nepal",
     period: "Sep 2021",
   },
-  {
-    degree: "Bachelor of Engineering",
-    focus: "GPA 3.77/4.00 (WES Evaluation)",
-    institution: "Tribhuvan University, Nepal",
-    period: "Sep 2018",
-  },
-];
+ ];
 
 export const experience = [
   {
