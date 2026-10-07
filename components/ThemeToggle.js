@@ -13,21 +13,29 @@ const STOPS = [
   { pos: 1, rgb: [198, 163, 224] },
 ];
 
-function colorAt(t) {
+function rgbAt(t) {
   for (let i = 0; i < STOPS.length - 1; i++) {
     const a = STOPS[i];
     const b = STOPS[i + 1];
     if (t >= a.pos && t <= b.pos) {
       const span = b.pos - a.pos || 1;
       const local = (t - a.pos) / span;
-      const r = Math.round(a.rgb[0] + (b.rgb[0] - a.rgb[0]) * local);
-      const g = Math.round(a.rgb[1] + (b.rgb[1] - a.rgb[1]) * local);
-      const bch = Math.round(a.rgb[2] + (b.rgb[2] - a.rgb[2]) * local);
-      return `rgb(${r}, ${g}, ${bch})`;
+      return [
+        Math.round(a.rgb[0] + (b.rgb[0] - a.rgb[0]) * local),
+        Math.round(a.rgb[1] + (b.rgb[1] - a.rgb[1]) * local),
+        Math.round(a.rgb[2] + (b.rgb[2] - a.rgb[2]) * local),
+      ];
     }
   }
-  const last = STOPS[STOPS.length - 1];
-  return `rgb(${last.rgb[0]}, ${last.rgb[1]}, ${last.rgb[2]})`;
+  return STOPS[STOPS.length - 1].rgb;
+}
+
+function toRgbString(rgb) {
+  return `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
+}
+
+function scaled(rgb, factor) {
+  return rgb.map((c) => Math.round(c * factor));
 }
 
 const DEFAULT_T = 0.6; // lands near the original teal accent
@@ -38,9 +46,19 @@ export default function ThemeToggle() {
   const dragging = useRef(false);
 
   const applyColor = useCallback((value) => {
-    const color = colorAt(value);
-    document.documentElement.style.setProperty("--color-accent", color);
-    document.documentElement.style.setProperty("--color-accent-dim", color);
+    const rgb = rgbAt(value);
+    const root = document.documentElement.style;
+
+    // Full-brightness picked color for highlights (buttons, links, borders)
+    root.setProperty("--color-accent", toRgbString(rgb));
+    root.setProperty("--color-accent-dim", toRgbString(rgb));
+
+    // Same hue, heavily darkened, used for the page background — this is
+    // what actually shifts as you move the slider, while staying dark
+    // enough that light text stays readable.
+    root.setProperty("--color-bg", toRgbString(scaled(rgb, 0.08)));
+    root.setProperty("--color-bg-raised", toRgbString(scaled(rgb, 0.14)));
+    root.setProperty("--color-line", toRgbString(scaled(rgb, 0.3)));
   }, []);
 
   useEffect(() => {
@@ -98,7 +116,7 @@ export default function ThemeToggle() {
       onPointerUp={handlePointerUp}
       onKeyDown={handleKeyDown}
       role="slider"
-      aria-label="Pick an accent color"
+      aria-label="Pick a background color theme"
       aria-valuemin={0}
       aria-valuemax={1}
       aria-valuenow={Math.round(t * 100) / 100}
