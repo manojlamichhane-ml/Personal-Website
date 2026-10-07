@@ -44,7 +44,7 @@ export default function ContactSection({ profile }) {
         />
         <textarea
           className="contact-textarea"
-          placeholder="Your message..."
+          placeholder="Dear Manoj, my backyard just flooded and I need an emergency HEC-RAS model by Friday..."
           rows={4}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
