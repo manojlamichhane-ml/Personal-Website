@@ -8,11 +8,11 @@ export const profile = {
   initials: "ML",
   credentials: "EIT, PE (Civil: Water Resources & Environmental)",
   title: "Water Resources Scientist, Ph.D.",
-  location: "Denver, CO",
+  location: "Denver, CO, USA",
   badge: "PH.D. · EIT · PE (WATER RESOURCES)",
   bioGreeting: "Hi, I'm Manoj!",
   bio:
-    "I'm a Water Resources Engineer working at the intersection of machine learning, climate modeling, and remote sensing. I spent my PhD years applying machine learning and advanced remote sensing to understand and address complex water resources challenges. I'm especially interested in building and deploying ML models and developing scalable workflows through MLOps.",
+    "I'm a Water Resources Engineer working at the intersection of machine learning, remote sensing, hydraulics, and hydrology . My work integrates Earth observation, geospatial data, and hydraulic and hydrologic modeling to understand complex water systems and support water resources management. I'm particularly interested in building and deploying ML models, developing scalable MLOps workflows, and bridging data driven approaches with physics based modeling to solve practical water resources challenges.",
   email: "drlamichhane.manoj@gmail.com",
   phone: "(607) 663-0567",
   scholarUrl: "https://scholar.google.com/citations?user=1a5hblcAAAAJ&hl=en",
