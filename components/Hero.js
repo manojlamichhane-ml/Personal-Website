@@ -35,7 +35,7 @@ export default function Hero({ profile }) {
       <div>
         <div className="portrait-frame">
           <Image
-            src={withBasePath("/portrait.jpg")}
+            src={withBasePath("/portrait.jpeg")}
             alt={profile.name}
             fill
             sizes="(max-width: 900px) 320px, 400px"
