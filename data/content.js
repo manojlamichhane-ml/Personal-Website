@@ -48,7 +48,7 @@ export const experience = [
   {
     role: "Graduate Research Assistant",
     organization: "South Dakota State University, Brookings, SD",
-    period: "Aug 2023 – Aug 2026",
+    period: "Aug 2023 – Apr 2026",
     description:
       "Developed data-driven models to estimate soil moisture, evapotranspiration, and streamflow using multi-source satellite data. Applied distributed and semi-distributed hydrological models, achieving a 27% reduction in error for deep-layer soil moisture prediction. Automated data processing pipelines in Python and Google Earth Engine for real-time soil moisture prediction. Supported proposal development for NASA, USDA, and NSF.",
   },
