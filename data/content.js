@@ -224,7 +224,7 @@ export const projects = [
 ];
 
 export const publicationsNote =
-  "14 peer-reviewed papers in high-impact Q1 journals and 21 oral/poster presentations at national and international conferences — full record and citation metrics on Google Scholar.";
+  "19 peer-reviewed papers in high-impact journals and 21 oral/poster presentations at national and international conferences — full record and citation metrics on Google Scholar.";
 
 export const publications = [
   {
